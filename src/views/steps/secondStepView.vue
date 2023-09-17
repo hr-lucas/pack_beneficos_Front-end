@@ -27,7 +27,7 @@
         />
 
         <Radios
-        title="Sexo"
+        title="Qual é o seu gênero?"
         :items="option"
         :value="formData.sex"
         v-model="formData.sex"

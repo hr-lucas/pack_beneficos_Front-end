@@ -35,6 +35,11 @@ onMounted(() => {
     return value;
   }, false);
 });
+if(props.type !== 'date') {
+  watch(() => props.modelValue, (newValue) => {
+  model.value = newValue;
+});
+}
 
 const label = computed(() => {
   if (props.label) return props.label;

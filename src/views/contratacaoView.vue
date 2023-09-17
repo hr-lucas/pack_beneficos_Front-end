@@ -22,6 +22,7 @@ import ProgressBar from '../components/progressbar.vue';
 const FirstStep = defineAsyncComponent(() => import("./steps/firstStepView.vue"));
 const SecondStep = defineAsyncComponent(() => import("./steps/secondStepView.vue"));
 const ThirdStep = defineAsyncComponent(() => import("./steps/thirdStepView.vue"));
+const FourthStep = defineAsyncComponent(() => import("./steps/FourthStepView.vue"));
 import { useStepsStore } from "./store/steps.js";
 const stepStore = useStepsStore();
 
@@ -41,6 +42,10 @@ const steps = {
   3: {
     componentId: ThirdStep,
     title: 'Endereço',
+  },
+  4: {
+    componentId: FourthStep,
+    title: 'Pagamento',
   },
 }
 </script>
