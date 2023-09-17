@@ -6,11 +6,28 @@ module.exports = {
     "./src/**/*.{vue,html,js}",
   ],
   theme: {
+
     extend: {
       colors: {
         'primary': "#0067CB",
         'secondary': "#51AB00",
         'white': "#ffff",
+      },
+      fontSize: {
+        title_lg: ['2rem', {
+          lineHeight: '2rem',
+          letterSpacing: '-0.01em',
+          fontWeight: '900',
+        }],
+        subtitle_lg: ['1rem', {
+          lineHeight: '1.3rem',
+          letterSpacing: '-0.02em',
+          fontWeight: '500',
+        }],
+      },
+      boxShadow: {
+        xl: '0px 10px 25px rgba(0, 0, 0, 0.1)',
+        radio: 'inset 1em 1em #0067CB'
       },
     },
     screens: {
