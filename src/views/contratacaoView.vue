@@ -2,12 +2,12 @@
   <main>
     <header class=" border-b pb-3 border-secondary">
       <ProgressBar :progress="progressBar" />
-      <div class="flex justify-between px-2">
+      <div class="flex justify-between px-2 max-w-7xl mx-auto text-primary font-bold">
         <h1>{{steps[stepStore.step].title}}</h1>
-        <h2>Passo {{ stepStore.step }} de 4</h2>
+        <h2 class=" ">Passo {{ stepStore.step }} de 4</h2>
       </div>
     </header>
-    <body class="px-[2%] py-5">
+    <body class="px-[2%] py-5 min-w-lg ">
       <component :is="steps[stepStore.step].componentId"></component>
     </body>
     <footer>

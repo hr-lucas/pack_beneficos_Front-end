@@ -8,12 +8,6 @@
   <span class="text-[16px] font-semibold transition-all group-hover:me-4">
     <slot></slot>
   </span>
-    <span v-if="!props.icon" >
-      <svg class="w-3.5 h-3.5 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
-      </svg>
-    </span>
-
   </button>
 </template>
 

@@ -1,4 +1,58 @@
-<script setup></script>
+<script setup>
+import { ref, computed } from "vue";
+import { useRouter, useRoute } from "vue-router";
+const $router = useRouter();
+const route = useRoute();
+
+const annual = ref(true);
+const selectPlan = computed(() => {
+  return annual.value ? planDetails.anual : planDetails.mensal;
+});
+const planDetails = {
+  anual: [
+    {
+      name: "Plano Especialistas",
+      price: "R$ 49,90",
+      description:
+        "Perfeito para quem deseja um cuidado completo, incluindo saúde mental, física e nutricional.",
+      details: [
+        "Teleconsulta",
+        "Pronto atendimento",
+        "Nutrição",
+        "Psicologia",
+        "Adicional R$ 9,90/mês por dependente",
+      ],
+    },
+    {
+      name: "Plano Básico",
+      price: "R$ 24,90",
+      description: "Ideal para quem precisa de orientação médica básica e regularmente.",
+      details: ["Teleconsulta", "Adicional de R$ 3,49/mês por dependente"],
+    },
+  ],
+  mensal: [
+    {
+      name: "Plano Especialistas",
+      price: "R$ 64,90",
+      description:
+        "Perfeito para quem deseja um cuidado completo, incluindo saúde mental, física e nutricional.",
+      details: [
+        "Teleconsulta",
+        "Pronto atendimento",
+        "Nutrição",
+        "Psicologia",
+        "Adicional R$ 14,90 por dependente",
+      ],
+    },
+    {
+      name: "Plano Básico",
+      price: "R$ 34,90",
+      description: "Ideal para quem precisa de orientação médica básica e regularmente.",
+      details: ["Teleconsulta", "Adicional de R$ 4,90/mês por dependente"],
+    },
+  ],
+};
+</script>
 
 <template>
   <main>
@@ -16,6 +70,7 @@
             <button
               class="text-white text-[1.2rem] min-w-[280px] max-w-[480px] px-7 py-3 rounded-md disabled:opacity-60 bg-primary !min-w-[auto]"
               id="button_home"
+              @click="$router.push({ name: 'contratacao', query: route.query })"
             >
               Contratar agora
             </button>
@@ -37,6 +92,7 @@
             <button
               class="text-white text-[1.2rem] min-w-[280px] max-w-[480px] px-7 py-3 rounded-md disabled:opacity-60 bg-secondary sm:w-full sm:!p-5"
               id="button_home"
+              @click="$router.push({ name: 'contratacao', query: route.query })"
             >
               Contratar agora
             </button>
@@ -108,6 +164,7 @@
           <button
             class="text-white text-[1.2rem] min-w-[280px] max-w-[480px] px-7 py-3 rounded-md disabled:opacity-60 bg-primary sm:w-full sm:p-5"
             id="button_home"
+            @click="$router.push({ name: 'contratacao', query: route.query })"
           >
             Contratar agora
           </button>
@@ -133,6 +190,7 @@
             <button
               class="text-white text-[1.2rem] min-w-[280px] max-w-[480px] px-7 py-3 rounded-md disabled:opacity-60 bg-secondary sm:w-full sm:p-5"
               id="button_home"
+                  @click="$router.push({ name: 'contratacao', query: route.query })"
             >
               Contratar agora
             </button>
@@ -216,6 +274,7 @@
         <button
           class="text-white text-[1.2rem] min-w-[280px] max-w-[480px] px-7 py-3 rounded-md disabled:opacity-60 bg-secondary mt-10 sm:w-full sm:p-5"
           id="button_home"
+              @click="$router.push({ name: 'contratacao', query: route.query })"
         >
           Contratar agora
         </button>
@@ -340,6 +399,7 @@
         <button
           class="text-white text-[1.2rem] min-w-[280px] max-w-[480px] px-7 py-3 rounded-md disabled:opacity-60 bg-primary sm:w-full sm:p-5"
           id="button_home"
+              @click="$router.push({ name: 'contratacao', query: route.query })"
         >
           Contratar agora
         </button>
@@ -401,6 +461,7 @@
         <button
           class="text-white text-[1.2rem] min-w-[280px] max-w-[480px] px-7 py-3 rounded-md disabled:opacity-60 bg-secondary hidden sm:block mt-10 sm:w-full sm:p-5"
           id="button_home"
+              @click="$router.push({ name: 'contratacao', query: route.query })"
         >
           Contratar agora
         </button>
@@ -414,130 +475,69 @@
             e psicológico
           </p>
         </div>
-        <div
-          class="flex flex-wrap items-center gap-4 sm:gap-10 justify-center my-10 mx-auto"
-        >
+        <div class="max-w-xl mx-auto space-y-2 text-center lg:max-w-none">
           <div
-            class="drop-shadow-2xl bg-white p-10 rounded-md w-[32%] sm:w-full min-h-[380px] sm:min-h-min flex flex-col flex-[1 1 280px] justify-start gap-3 text-center"
+            class="relative z-0 inline-flex overflow-hidden bg-white border-2 p-2 border-secondary rounded-full"
           >
-            <h2 class="text-[24px] text-primary">Plano Bronze</h2>
-            <div>
-              <div class="flex justify-center items-baseline">
-                <span class="text-[32px] text-secondary font-bold">R$ 19,90</span
-                ><span class="text-secondary">/mês</span>
-              </div>
-              <button
-                class="text-white text-[1.2rem] min-w-[280px] max-w-[480px] px-7 py-3 rounded-md disabled:opacity-60 bg-primary w-full"
-                id="button_home"
-              >
-                Contratar agora</button
-              ><span class="text-gray text-[12px]"
-                >*Pagamento via PIX, Boleto ou Cartão de Crédito.</span
-              >
-              <div class="w-full">
-                <ul class="w-full flex flex-col items-start">
-                  <li
-                    class="flex gap-2 border-b-[1px] border-gray w-full p-2 text-primary"
-                  >
-                    <div>
-                      <img
-                        class="w-[25px]"
-                        src="@/assets/check-mark-eeabd946.svg"
-                        alt=""
-                      />
-                    </div>
-                    Teleconsulta
-                  </li>
-                </ul>
-              </div>
-            </div>
+            <button
+              class="block w-full px-8 py-2 text-sm font-medium transition rounded-full"
+              :class="annual == true ? ' bg-secondary !text-white' : ''"
+              @click="annual = true"
+              type="button"
+            >
+              Anual
+            </button>
+            <button
+              class="block w-full px-8 py-2 text-sm font-medium transition rounded-full"
+              :class="annual == false ? 'bg-secondary text-white' : ''"
+              @click="annual = false"
+              type="button"
+            >
+              Mensal
+            </button>
           </div>
+        </div>
+        <div>
           <div
-            class="drop-shadow-2xl bg-white p-10 rounded-md w-[32%] sm:w-full min-h-[380px] sm:min-h-auto flex flex-col flex-[1 1 280px] justify-start gap-3 text-center"
+            class="flex flex-wrap items-center gap-4 sm:gap-10 justify-center max-w-7xl my-10 mx-auto"
           >
-            <h2 class="text-[24px] text-primary">Plano Prata</h2>
-            <div>
-              <div class="flex justify-center items-baseline">
-                <span class="text-[32px] text-secondary font-bold">R$ 49,90</span
-                ><span class="text-secondary">/mês</span>
+            <div
+              v-for="(plan, index) in selectPlan"
+              :key="index"
+              :class="
+                plan.name === 'Plano Especialistas' ? 'border-[2px] border-secondary' : ''
+              "
+              class="drop-shadow-2xl bg-white p-10 rounded-md w-[32%] sm:w-full min-h-[380px] sm:min-h-min flex flex-col flex-[1 1 280px] justify-start gap-3 text-center"
+            >
+              <h2 class="text-[24px] text-primary font-bold">{{ plan.name }}</h2>
+              <p class="text-[14px]">{{ plan.description }}</p>
+              <div>
+                <div class="flex justify-center items-baseline">
+                  <span class="text-[32px] text-secondary font-bold">{{ plan.price }}</span
+                  ><span class="text-secondary">/mês</span>
+                </div>
+                <button
+                  class="text-white text-[1.2rem] min-w-[280px] max-w-[480px] px-7 py-3 rounded-md disabled:opacity-60 bg-primary w-full"
+                  id="button_home"
+                  @click="$router.push({ name: 'contratacao', query: route.query })"
+                >
+                  Contratar agora</button
+                ><span class="text-gray text-[12px]">*Pagamento Cartão de Crédito.</span>
+                <div class="w-full">
+                  <ul class="w-full flex flex-col items-start">
+                    <li
+                      v-for="(details, index) in plan.details"
+                      :key="index"
+                      class="flex gap-2 border-b-[1px] border-gray w-full text-left p-2 text-primary"
+                    >
+                      <div>
+                        <img class="w-[25px]" src="@/assets/check-mark-eeabd946.svg" alt="" />
+                      </div>
+                      {{ details }}
+                    </li>
+                  </ul>
+                </div>
               </div>
-              <button
-                class="text-white text-[1.2rem] min-w-[280px] max-w-[480px] px-7 py-3 rounded-md disabled:opacity-60 bg-primary w-full"
-                id="button_home"
-              >
-                Contratar agora</button
-              ><span class="text-gray text-[12px]"
-                >*Pagamento via PIX, Boleto ou Cartão de Crédito.</span
-              >
-            </div>
-            <div class="w-full">
-              <ul class="w-full flex flex-col items-start">
-                <li class="flex gap-2 border-b-[1px] border-gray w-full p-2 text-primary">
-                  <div>
-                    <img class="w-[25px]" src="@/assets/check-mark-eeabd946.svg" alt="" />
-                  </div>
-                  Teleconsulta
-                </li>
-                <li class="flex gap-2 border-b-[1px] border-gray w-full p-2 text-primary">
-                  <div>
-                    <img class="w-[25px]" src="@/assets/check-mark-eeabd946.svg" alt="" />
-                  </div>
-                  Pronto atendimento
-                </li>
-                <li class="flex gap-2 border-b-[1px] border-gray w-full p-2 text-primary">
-                  <div>
-                    <img class="w-[25px]" src="@/assets/check-mark-eeabd946.svg" alt="" />
-                  </div>
-                  Psicologia
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div
-            class="drop-shadow-2xl bg-white p-10 rounded-md w-[32%] sm:w-full min-h-[380px] border-[2px] border-secondary sm:min-h-auto flex flex-col flex-[1 1 280px] justify-start gap-3 text-center"
-          >
-            <h2 class="text-[24px] text-primary">Plano Ouro</h2>
-            <div>
-              <div class="flex justify-center items-baseline">
-                <span class="text-[32px] text-secondary font-bold">R$ 59,90</span
-                ><span class="text-secondary">/mês</span>
-              </div>
-              <button
-                class="text-white text-[1.2rem] min-w-[280px] max-w-[480px] px-7 py-3 rounded-md disabled:opacity-60 bg-primary w-full"
-                id="button_home"
-              >
-                Contratar agora</button
-              ><span class="text-gray text-[12px]"
-                >*Pagamento via PIX, Boleto ou Cartão de Crédito.</span
-              >
-            </div>
-            <div class="w-full">
-              <ul class="w-full flex flex-col items-start">
-                <li class="flex gap-2 border-b-[1px] border-gray w-full p-2 text-primary">
-                  <div>
-                    <img class="w-[25px]" src="@/assets/check-mark-eeabd946.svg" alt="" />
-                  </div>
-                  Teleconsulta
-                </li>
-                <li class="flex gap-2 border-b-[1px] border-gray w-full p-2 text-primary">
-                  <div>
-                    <img class="w-[25px]" src="@/assets/check-mark-eeabd946.svg" alt="" />
-                  </div>
-                  Pronto atendimento
-                </li>
-                <li class="flex gap-2 border-b-[1px] border-gray w-full p-2 text-primary">
-                  <div>
-                    <img class="w-[25px]" src="@/assets/check-mark-eeabd946.svg" alt="" />
-                  </div>
-                  Nutrição
-                </li>
-                <li class="flex gap-2 border-b-[1px] border-gray w-full p-2 text-primary">
-                  <div>
-                    <img class="w-[25px]" src="@/assets/check-mark-eeabd946.svg" alt="" />
-                  </div>
-                  Psicologia
-                </li>
-              </ul>
             </div>
           </div>
         </div>
@@ -556,6 +556,7 @@
           <button
             class="text-white text-[1.2rem] min-w-[280px] max-w-[480px] px-7 py-3 rounded-md disabled:opacity-60 bg-secondary sm:w-full w-[70%] !p-5"
             id="button_home"
+                @click="$router.push({ name: 'contratacao', query: route.query })"
           >
             Falar com especialista
           </button>

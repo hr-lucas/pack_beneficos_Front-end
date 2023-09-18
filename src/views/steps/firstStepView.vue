@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section class=" max-w-xl mx-auto">
     <div class="font-bold leading-6 text-primary text-[22px]">
       <h3>Vamos precisar de algumas informações rápidas sobre você.</h3>
     </div>

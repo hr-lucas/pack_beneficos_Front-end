@@ -1,5 +1,5 @@
 <template>
-    <section>
+    <section class="max-w-xl mx-auto">
       <div class="font-bold leading-6 text-primary text-[22px]">
         <h3>Preencha os campos abaixo com o seu endereço.</h3>
       </div>
