@@ -62,8 +62,8 @@ const planDetails = {
           <div class="w-6/12">
             <img
               src="@/assets/logo-d4bbf68c.svg"
-              class="sm:w-[130px]"
-              alt="Pack Beneficios"
+              class="sm:w-[130px] w-[200px]"
+              alt="Pack Saúde"
             />
           </div>
           <div class="w-6/12 flex justify-end">
@@ -87,7 +87,7 @@ const planDetails = {
               Os melhores profissionais ao seu alcance quando e onde estiver: pronto
               atendimento, agendamento com especialistas, acompanhamento nutricional e
               psicológico, tudo online. A solução completa em saúde digital é Pack
-              Benefícios.
+              Saúde.
             </p>
             <button
               class="text-white text-[1.2rem] min-w-[280px] max-w-[480px] px-7 py-3 rounded-md disabled:opacity-60 bg-secondary sm:w-full sm:!p-5"
@@ -206,7 +206,7 @@ const planDetails = {
       <section class="p-20 sm:p-5 sm:py-10 max-w-7xl mx-auto">
         <h1 class="text-title_lg text-primary">Sua mente também merece esse cuidado</h1>
         <p class="text-subtitle_lg text-[#5b5b5ba7] !font-light text-justify my-3">
-          A Pack Benefícios se preocupa com você de maneira completa. <br />Faça consultas
+          A Pack Saúde se preocupa com você de maneira completa. <br />Faça consultas
           online com psicólogos e cuide da sua saúde mental.
         </p>
         <div class="flex justify-center items-center sm:flex-col-reverse">
@@ -282,7 +282,7 @@ const planDetails = {
       <section class="p-20 sm:p-5 text-center max-w-7xl mx-auto">
         <h1 class="text-title_lg text-primary">
           Conheça os benefícios da<br class="sm:hidden" />
-          Pack Benefícios
+          Pack Saúde
         </h1>
         <div class="flex flex-wrap items-center gap-4 justify-center mt-4 mx-auto">
           <div
@@ -450,7 +450,7 @@ const planDetails = {
               <h1 class="text-[22px]">3</h1>
             </div>
             <div class="text-center flex flex-col gap-3">
-              <h2 class="font-semibold text-[20px]">Acesse o Pack Benefícios.</h2>
+              <h2 class="font-semibold text-[20px]">Acesse o Pack Saúde.</h2>
               <p>
                 Pronto! Você já tem acesso assim que o pagamento é confirmado. Sem
                 carência.
@@ -547,7 +547,7 @@ const planDetails = {
           <img
             src="@/assets/call-8d596235.svg"
             alt="Especialistas que atendem na 
-        Pack Benefícios."
+        Pack Saúde."
           />
           <h1 class="text-title_lg mt-10 text-primary">Precisa de mais informações?</h1>
           <p class="text-subtitle_lg text-[#5b5b5ba7] !font-light text-justify my-3">
@@ -567,7 +567,7 @@ const planDetails = {
               <summary
                 class="flex cursor-pointer items-center justify-between gap-1.5 rounded-lg bg-gray-50 p-4 text-primary border-[1px]"
               >
-                <h2 class="font-medium">O que é a Pack Beneficios?</h2>
+                <h2 class="font-medium">O que é a Pack Saúde?</h2>
                 <svg
                   class="h-5 w-5 shrink-0 transition duration-300 group-open:-rotate-180"
                   xmlns="http://www.w3.org/2000/svg"
@@ -765,7 +765,7 @@ const planDetails = {
         <div class="mx-auto max-w-7xl px-4 py-8">
           <div class="flex items-center justify-between">
             <div class="flex justify-center text-teal-600 sm:justify-start">
-              <img src="@/assets/logo_white-4b6a2359.svg" alt="Pack Beneficios" />
+              <img class="w-[120px] " src="@/assets/logo_white-4b6a2359.svg" alt="Pack Saúde" />
             </div>
             <p class="mt-4 text-center text-sm text-white">
               Copyright © 2023. Todos direitos reservados.
@@ -773,13 +773,7 @@ const planDetails = {
           </div>
         </div>
       </footer>
-      <a
-        href="https://api.whatsapp.com/send?phone=3484327928"
-        id="wpp_tudo"
-        class="float"
-        target="_blank"
-        ><i class="uil uil-whatsapp"></i
-      ></a>
+      
     </div>
   </main>
 </template>
