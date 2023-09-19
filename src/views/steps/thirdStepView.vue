@@ -46,7 +46,7 @@
           v-model="formData.complement"
           :modelValue="formData.complement"
         />
-          <Button :disabled="v$.$invalid">Continuar</Button>
+          <Button id="button_thirdStep" :disabled="v$.$invalid">Continuar</Button>
         </form>
       </div>
     </section>

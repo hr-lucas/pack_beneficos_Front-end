@@ -68,12 +68,13 @@ const planDetails = {
           </div>
           <div class="w-6/12 flex justify-end">
             <button
-              class="text-white text-[1.2rem] min-w-[280px] max-w-[480px] px-7 py-3 rounded-md disabled:opacity-60 bg-primary !min-w-[auto]"
-              id="button_home"
-              @click="$router.push({ name: 'contratacao', query: route.query })"
-            >
-              Contratar agora
-            </button>
+            class="text-white text-[1.2rem] max-w-[480px] mr-5 px-7 py-3 rounded-md disabled:opacity-60 bg-secondary !min-w-[auto]"
+            id="button_login"
+            @click="$router.push({ name: 'login', query: route.query })"
+          >
+           Entrar
+          </button>
+      
           </div>
         </header>
       </div>
@@ -765,7 +766,7 @@ const planDetails = {
         <div class="mx-auto max-w-7xl px-4 py-8">
           <div class="flex items-center justify-between">
             <div class="flex justify-center text-teal-600 sm:justify-start">
-              <img class="w-[120px] " src="@/assets/logo_white-4b6a2359.svg" alt="Pack Saúde" />
+              <img src="@/assets/logo_white-4b6a2359.svg" alt="Pack Saúde" />
             </div>
             <p class="mt-4 text-center text-sm text-white">
               Copyright © 2023. Todos direitos reservados.

@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "vite --mode development",
-    "build": "vite build --mode $npm_config_environment",
+    "build": "vite build --mode development",
     "preview": "vite preview",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore",
     "format": "prettier --write src/"
@@ -16,6 +16,7 @@
     "brazilian-values": "^0.13.0",
     "moment": "^2.29.4",
     "pinia": "^2.1.6",
+    "vite-plugin-compression": "^0.5.1",
     "vue": "^3.3.4",
     "vue-router": "^4.2.4",
     "vue-the-mask": "^0.11.1"

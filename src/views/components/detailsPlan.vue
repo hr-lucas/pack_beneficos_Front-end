@@ -47,7 +47,7 @@
             <button
               @click="redirect(plan.url, plan.select)"
               class="text-white text-[1.2rem] min-w-[280px] max-w-[480px] px-7 py-3 rounded-md disabled:opacity-60 bg-primary w-full"
-              id="button_home"
+              id="button_FourthStep"
             >
               Contratar agora</button
             ><span class="text-gray text-[12px]">*Pagamento Cartão de Crédito.</span>

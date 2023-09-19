@@ -31,7 +31,7 @@
             () => !v$.email.email.$invalid || 'E-mail inválido',
           ]"
         />
-        <Button :disabled="v$.$invalid">Continuar</Button>
+        <Button id="button_firtStep" :disabled="v$.$invalid">Continuar</Button>
       </form>
     </div>
   </section>

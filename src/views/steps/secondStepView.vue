@@ -32,7 +32,7 @@
         :value="formData.sex"
         v-model="formData.sex"
       />
-        <Button :disabled="v$.$invalid">Continuar</Button>
+        <Button  id="button_secondStep" :disabled="v$.$invalid">Continuar</Button>
       </form>
     </div>
   </section>
